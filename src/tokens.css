@@ -1,0 +1,38 @@
+:root {
+  --font-family-primary: Inter, "Inter Fallback", system-ui, sans-serif;
+  --font-size-xs: 14.25px;
+  --font-size-sm: 16.63px;
+  --font-size-md: 17.81px;
+  --font-size-lg: 19px;
+  --font-size-xl: 21.38px;
+  --font-size-2xl: 28.5px;
+  --font-size-3xl: 35.63px;
+  --font-size-4xl: 42.75px;
+  --font-weight-base: 400;
+  --line-height-base: 28.5px;
+  --color-text-primary: #ebebeb;
+  --color-text-secondary: oklab(0.928797 -0.00316215 -0.0121768 / 0.8);
+  --color-text-tertiary: lab(66.2718 -0.335515 -7.12347);
+  --color-text-inverse: lab(57.3317 15.3854 -70.81);
+  --color-surface-base: #000000;
+  --color-surface-muted: lab(16.2244 -0.476554 -13.2095);
+  --color-surface-strong: lab(7.77863 1.58628 -14.2877);
+  --color-border-default: #666666;
+  --color-border-muted: lab(36.0651 -0.211209 -9.63474);
+  --color-border-strong: oklab(0.709998 -0.00166321 -0.0189102 / 0.25);
+  --space-1: 7.13px;
+  --space-2: 9.5px;
+  --space-3: 14.25px;
+  --space-4: 19px;
+  --space-5: 23.75px;
+  --space-6: 28.5px;
+  --space-7: 38px;
+  --space-8: 57px;
+  --radius-xs: 4px;
+  --radius-sm: 7.13px;
+  --radius-md: 14.25px;
+  --shadow-1: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
+  --motion-instant: 150ms;
+  --motion-fast: 200ms;
+  --focus-ring: 2px solid #7eb8ff;
+}

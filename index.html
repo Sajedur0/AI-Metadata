@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Remove AI Label &amp; Metadata from Photos – Free, No Upload</title>
+  <meta name="description" content="Strip C2PA, XMP, and EXIF from images in your browser. Nothing is uploaded." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="logo" href="./">RemoveAILabel</a>
+      <nav aria-label="Primary">
+        <a href="#tool">Clean</a>
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap">
+      <p class="eyebrow">Browser-only · never uploaded</p>
+      <h1>Remove AI Label from Your Photos — Instantly, Free.</h1>
+      <p class="lede">
+        Strip C2PA, XMP, EXIF, and PNG metadata from files you own — before you upload to Etsy, TikTok, Pinterest, and other platforms.
+      </p>
+    </section>
+
+    <section id="tool" class="wrap tool-section" aria-labelledby="tool-heading">
+      <h2 id="tool-heading" class="visually-hidden">Clean images</h2>
+      <div class="card tool-card">
+        <label class="toggle">
+          <input type="checkbox" id="inject-exif" />
+          <span>Inject camera EXIF (JPEG only)</span>
+        </label>
+        <p class="hint">Adds placeholder camera metadata after cleaning</p>
+
+        <div
+          id="dropzone"
+          class="dropzone"
+          tabindex="0"
+          role="button"
+          aria-describedby="drop-hint"
+        >
+          <input id="file-input" type="file" accept="image/jpeg,image/png,image/webp,image/avif,.heic,.heif" multiple hidden />
+          <p class="drop-title">Drop images here or click to upload</p>
+          <p id="drop-hint" class="drop-meta">JPG, PNG, WebP, AVIF, HEIC · Max 15MB · Batch up to 30 · Not GIF</p>
+        </div>
+
+        <button type="button" id="clean-btn" class="btn btn-primary" disabled>
+          Clean Images — Free
+        </button>
+        <p class="cloud-note">
+          From iCloud Photos or cloud drive? Download the full original on your device first — very small JPG/PNG placeholders (under 4KB) often cannot be read. WebP is allowed even when small.
+        </p>
+      </div>
+
+      <ol class="steps">
+        <li><span>1</span> Upload photo</li>
+        <li><span>2</span> Strip C2PA/XMP</li>
+        <li><span>3</span> Download &amp; post</li>
+      </ol>
+
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+      <ul id="file-list" class="file-list" hidden></ul>
+      <div id="results" class="results" hidden></div>
+    </section>
+
+    <section class="wrap content" id="how">
+      <h2>Why do platforms show AI Info?</h2>
+      <p>
+        Platforms scan uploads for C2PA and XMP — the usual file-level trigger for “AI Info” and “Made with AI.”
+        This tool re-encodes pixels in your browser so those containers are gone. Your files never leave this device.
+      </p>
+      <h2>What we remove</h2>
+      <ul class="feature-list">
+        <li>C2PA / Content Credentials</li>
+        <li>XMP generation tags (Midjourney, Firefly, Stable Diffusion)</li>
+        <li>EXIF: GPS, camera, timestamps, serials</li>
+        <li>PNG tEXt / iTXt / zTXt chunks</li>
+      </ul>
+    </section>
+
+    <section class="wrap content" id="faq">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Is anything uploaded?</summary>
+        <p>No. Decoding, stripping, and download all happen in this tab.</p>
+      </details>
+      <details>
+        <summary>Will pixels change?</summary>
+        <p>JPEG/WebP are re-encoded at high quality. PNG is lossless. AVIF exports as PNG.</p>
+      </details>
+      <details>
+        <summary>Does this hide visual watermarks?</summary>
+        <p>No. We only strip file-level metadata. Pixel watermarks and model fingerprints stay.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <p>Free forever · batch up to 30 · WCAG 2.2 AA</p>
+  </footer>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
